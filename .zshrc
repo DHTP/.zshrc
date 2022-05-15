@@ -148,6 +148,17 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+
+~/.zshrc
+### End of ZInit's installer chunk
+
+zinit light zdharma/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+
+"terminal.integrated.shell.osx": "/bin/zsh"
+
 # Simplify prompt if we're using Hyper
 if [[ "$TERM_PROGRAM" == "Hyper" ]]; then
   SPACESHIP_PROMPT_SEPARATE_LINE=false
